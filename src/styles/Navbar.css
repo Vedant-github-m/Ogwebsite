@@ -1,0 +1,151 @@
+/* Floating Pill Navbar */
+.navbar {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+    max-width: 95%;
+    /* Prevent overflow on small screens */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-container {
+    background: #FFFFFF;
+    padding: 12px 48px;
+    border-radius: 999px;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.08);
+    /* Soft, clean shadow */
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* Generous spacing like the ref image */
+    justify-content: space-between;
+    min-width: 680px;
+    /* Ensure structure */
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.navbar.scrolled .navbar-container {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Nav Groups (Left/Right) */
+.nav-group {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1A1A1A;
+    /* Dark text */
+    text-decoration: none;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.nav-item:hover {
+    color: var(--accent-blue);
+}
+
+/* Logo - Centerpiece */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: #000000;
+    /* Black icon to match strict style */
+}
+
+/* Mobile Responsive */
+.mobile-toggle {
+    display: none;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 90%;
+    max-width: 320px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) translateY(0);
+}
+
+.mobile-menu a {
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.mobile-menu a:hover {
+    background: var(--bg-secondary);
+}
+
+@media (max-width: 900px) {
+    .navbar-container {
+        min-width: unset;
+        width: 100%;
+        padding: 12px 24px;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .nav-group {
+        display: none;
+        /* Hide desktop links */
+    }
+
+    .logo {
+        flex-grow: 1;
+        justify-content: center;
+        /* Center logo on mobile too */
+    }
+
+    .mobile-toggle {
+        display: block;
+        position: absolute;
+        right: 24px;
+    }
+}
