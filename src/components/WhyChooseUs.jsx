@@ -1,4 +1,4 @@
-import { Users, Zap, DollarSign, Layers, Clock } from 'lucide-react';
+import { Users, Zap, DollarSign, Layers } from 'lucide-react';
 import '../styles/WhyChooseUs.css';
 
 const benefits = [
@@ -22,11 +22,7 @@ const benefits = [
         title: 'Scalable Architecture',
         description: 'We build systems designed to grow with your business, handling millions of users effortlessly.'
     },
-    {
-        icon: <Clock size={32} />,
-        title: '24/7 Support',
-        description: 'Round-the-clock technical support to ensure your critical systems are always operational.'
-    }
+
 ];
 
 const WhyChooseUs = () => {

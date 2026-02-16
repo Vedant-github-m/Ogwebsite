@@ -5,169 +5,124 @@
     overflow: hidden;
 }
 
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+
+.marquee-wrapper {
+    width: 100%;
+    margin-top: 60px;
     position: relative;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    overflow: hidden;
+    /* Optional: Fade masks on left and right */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 20px 0;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Move it by a calculated chunk. Since we have 3 sets of items, moving -33.33% or similar
+           is the goal to loop seamlessly.
+           Actually, the simplest way for a perfect loop with this duplication technique:
+           move it by -33.33% if we had 3 identical sets, BUT correct implementation:
+           We need to calculate based on width. 
+           Let's just use -50% if we only duplicated once. 
+           Since I duplicated it twice (original + copy + copy), I have 3 sets.
+           Moving from start of Set 1 to Start of Set 2 is moving -1/3 of the total width.
+        */
+        transform: translateX(calc(-100% / 3));
+    }
 }
 
 .testimonial-card {
     background: var(--bg-card);
-    padding: 60px 48px;
-    border-radius: 24px;
+    padding: 30px 24px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    /* Stronger shadow for lift */
-    text-align: center;
-    max-width: 700px;
-    width: 100%;
-    position: relative;
-    transition: all 0.3s ease;
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.quote-icon-wrapper {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Fixed width for marquee items */
+    width: 320px;
+    min-width: 320px;
+    /* Ensure they don't shrink */
+    flex-shrink: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.quote-icon {
-    color: var(--accent-blue);
-    opacity: 0.2;
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
 }
+
+
 
 .testimonial-quote {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--text-primary);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-family: var(--font-heading);
     font-style: italic;
+    flex-grow: 1;
 }
 
 .testimonial-footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
 }
 
 .rating {
     display: flex;
     gap: 4px;
     color: #FFB800;
-    /* Gold color for stars */
 }
 
 .author-details {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 16px;
-}
-
-.author-image {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #FFFFFF;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 12px;
 }
 
 .author-info h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 0 4px 0;
+    margin: 0 0 2px 0;
 }
 
 .author-info span {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     font-weight: 500;
-}
-
-/* Navigation Buttons */
-.nav-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 1px solid var(--border-subtle);
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.nav-btn:hover {
-    background: var(--text-primary);
-    color: #FFFFFF;
-    transform: scale(1.1);
-}
-
-/* Dots */
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 40px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--border-subtle);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background: var(--accent-blue);
-    transform: scale(1.2);
-    width: 24px;
-    /* Elongate active dot */
-    border-radius: 5px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .testimonial-card {
-        padding: 40px 24px;
+        width: 300px;
+        min-width: 300px;
+        padding: 30px 20px;
     }
 
     .testimonial-quote {
-        font-size: 1.25rem;
-    }
-
-    .nav-btn {
-        display: none;
-        /* Hide arrows on mobile, rely on dots/swipe (future) */
+        font-size: 1rem;
     }
 }
