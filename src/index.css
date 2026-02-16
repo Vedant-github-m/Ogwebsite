@@ -60,9 +60,26 @@ button,
   letter-spacing: normal;
 }
 
-.logo,
+/* Logo - Centerpiece */
+.logo {
+  font-family: var(--font-heading);
+}
+
+/* Global Section Tag (Pill Style) */
 .section-tag {
   font-family: var(--font-heading);
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(var(--accent-blue-rgb), 0.1);
+  color: var(--accent-blue);
+  border-radius: 99px;
+  font-size: 2rem;
+  /* Massive size */
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(var(--accent-blue-rgb), 0.2);
 }
 
 /* Utility classes */

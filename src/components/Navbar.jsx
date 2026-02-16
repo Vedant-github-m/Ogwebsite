@@ -30,8 +30,9 @@ const Navbar = () => {
 
                 {/* Centered Logo */}
                 <Link to="/" className="logo">
-                    <Code2 className="logo-icon" />
-                    <span>DevService</span>
+                    <img src="/src/assets/logo.png" alt="PixelPilot Logo" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+                    <Code2 className="logo-icon" style={{ display: 'none' }} />
+                    <span><span style={{ color: 'var(--accent-blue)' }}>Pixel</span>Pilot</span>
                 </Link>
 
                 {/* Right Links */}
