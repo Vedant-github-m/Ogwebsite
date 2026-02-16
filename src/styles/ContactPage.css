@@ -141,7 +141,7 @@
     outline: none;
     border-color: var(--accent-blue);
     background: #FFFFFF;
-    box-shadow: 0 0 0 4px rgba(58, 134, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(var(--accent-blue-rgb), 0.1);
 }
 
 .submit-btn {
@@ -159,12 +159,12 @@
     justify-content: center;
     gap: 10px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(58, 134, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(var(--accent-blue-rgb), 0.3);
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(58, 134, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(var(--accent-blue-rgb), 0.4);
 }
 
 /* Responsive */

@@ -1,6 +1,6 @@
 .services-section {
     padding: var(--space-16) 0;
-    background-color: var(--bg-dark);
+    background-color: transparent;
 }
 
 .section-header {
@@ -38,8 +38,8 @@
 }
 
 .service-card {
-    background: #FFFFFF;
-    /* Ensure clean white bg */
+    background: var(--bg-card);
+    /* Opaque White Card to hide grid */
     padding: var(--space-8);
     border-radius: var(--radius-lg);
     /* Rounded corners */
@@ -62,7 +62,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 70%);
+    background: radial-gradient(circle at top right, rgba(var(--accent-blue-rgb), 0.08), transparent 70%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -70,7 +70,7 @@
 
 .service-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(99, 102, 241, 0.3);
+    border-color: rgba(var(--accent-blue-rgb), 0.3);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
@@ -81,7 +81,7 @@
 .service-icon {
     display: inline-flex;
     padding: 12px;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(var(--accent-blue-rgb), 0.1);
     border-radius: 12px;
     color: var(--accent-blue);
     margin-bottom: var(--space-4);
@@ -103,6 +103,7 @@
     line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

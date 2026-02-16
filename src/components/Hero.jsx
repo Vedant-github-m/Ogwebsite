@@ -8,10 +8,7 @@ const Hero = () => {
             <div className="hero-bg-glow"></div>
             <div className="container hero-container">
                 <div className="hero-content">
-                    <div className="badge">
-                        <span>New: AI Integration Services</span>
-                        <ChevronRight size={14} />
-                    </div>
+
                     <h1>
                         Building <br />
                         <span className="text-gradient">Scalable Software</span> <br />
@@ -35,9 +32,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero-image-container">
-                    <img src={heroImage} alt="Abstract Tech Illustration" className="hero-image" />
-                </div>
+                {/* Image Removed by User Request */}
             </div>
         </section>
     );

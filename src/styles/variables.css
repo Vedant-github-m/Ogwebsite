@@ -1,31 +1,43 @@
 :root {
-  /* Colors - Futuristic Minimal Palette */
-  --bg-main: #FFFFFF;
-  --bg-secondary: #F5F6FA;
+  /* Colors - Off-White Pixel Theme */
+  --bg-main: #F9F9F9;
+  /* Off-White / Cream Base */
+  --bg-secondary: #F0F0F0;
+  /* Light Grey for depth */
   --bg-card: #FFFFFF;
-  /* often cards are white on light bg with shadow, or slightly off-white */
+  /* Pure White Cards */
 
   --text-primary: #1A1A1A;
-  --text-secondary: #64748B;
-  /* Slate 500 equivalent for softer grey text */
+  /* Dark Text */
+  --text-secondary: #57606A;
+  /* Muted Dark Grey */
   --text-inverse: #FFFFFF;
-  /* Text on dark backgrounds */
+  /* White text on accents */
 
-  --primary-indigo: #2D1B69;
-  --accent-blue: #3A86FF;
-  --accent-pink: #FF4D8D;
+  /* RGB Values for Opacity Manipulation */
+  --primary-indigo: #21262D;
+  /* Mapped to Dark Card */
+  --primary-indigo-rgb: 33, 38, 45;
 
-  /* Gradient: Purple -> Blue -> Pink */
-  --gradient-main: linear-gradient(135deg, #6C63FF 0%, #3A86FF 50%, #FF4D8D 100%);
-  --gradient-hover: linear-gradient(135deg, #5a52d5 0%, #2a75ef 50%, #ff337a 100%);
+  --accent-blue: #2EA043;
+  /* Retro GitHub Green */
+  --accent-blue-rgb: 46, 160, 67;
 
-  /* Typography */
-  --font-heading: 'Poppins', 'Montserrat', sans-serif;
-  /* Modern, geometric heading */
+  --accent-pink: #3FB950;
+  /* Lighter Green Accent */
+  --accent-pink-rgb: 63, 185, 80;
+
+  /* Gradient: Retro Green */
+  --gradient-main: linear-gradient(135deg, #2EA043 0%, #3FB950 100%);
+  --gradient-hover: linear-gradient(135deg, #238636 0%, #2EA043 100%);
+
+  /* Typography - Hybrid System */
+  --font-heading: 'VT323', monospace;
+  /* Retro Pixel Headings */
   --font-body: 'Inter', system-ui, sans-serif;
-  /* Clean, legible body */
-  --font-accent: 'Montserrat', sans-serif;
-  /* For specific UI elements if needed */
+  /* Clean Modern Body */
+  --font-accent: 'VT323', monospace;
+  /* Retro Accent Font */
 
   /* Spacing */
   --space-1: 4px;
@@ -41,15 +53,15 @@
   --radius-lg: 16px;
   --radius-full: 9999px;
 
-  --border-subtle: #E2E8F0;
-  /* Light grey border */
+  --border-subtle: #30363D;
+  /* Dark Grey Border */
 
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-primary: 0 4px 14px 0 rgba(74, 58, 255, 0.3);
-  /* Colored shadow for primary elements */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-primary: 0 4px 14px 0 rgba(46, 160, 67, 0.25);
+  /* Green Glow */
 }
 
 body {

@@ -1,6 +1,7 @@
 .portfolio-section {
     padding: var(--space-16) 0;
-    background-color: var(--bg-dark);
+    background-color: transparent;
+    /* Allow grid to show through */
 }
 
 .portfolio-grid {
@@ -12,16 +13,19 @@
 
 .portfolio-card {
     background: var(--bg-card);
+    /* White */
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
 
 .portfolio-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(99, 102, 241, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-xl);
+    /* Stronger green shadow */
 }
 
 .portfolio-image-container {
@@ -47,7 +51,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 10, 0.7);
+    background: rgba(var(--primary-indigo-rgb), 0.85);
+    /* Dynamic Dark Overlay */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,17 +67,20 @@
 .btn-icon {
     width: 48px;
     height: 48px;
-    background: white;
+    background: var(--bg-card);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg-dark);
+    color: var(--accent-blue);
+    /* Green Icon */
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .btn-icon:hover {
     transform: scale(1.1);
+    color: var(--text-primary);
 }
 
 .portfolio-content {
@@ -93,6 +101,7 @@
     font-size: 1.5rem;
     margin-bottom: var(--space-4);
     color: var(--text-primary);
+    font-weight: 600;
 }
 
 .portfolio-card p {
@@ -107,7 +116,7 @@
     gap: var(--space-2);
     font-weight: 600;
     color: var(--text-primary);
-    transition: gap 0.3s ease;
+    transition: gap 0.3s ease, color 0.3s ease;
 }
 
 .portfolio-link:hover {

@@ -8,16 +8,17 @@
     overflow: hidden;
     padding-top: 80px;
     /* Account for fixed navbar */
-    background: #FFFFFF;
-    /* Explicit White Background */
+    background: var(--bg-main);
+    /* Light Grey */
 }
 
-/* Purple Glow (Top Right) */
+/* Soft Green Glow (Top Right) */
 .hero-bg-glow {
     position: absolute;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(46, 125, 91, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Soft Green */
     top: -25%;
     right: -10%;
     z-index: 0;
@@ -26,13 +27,14 @@
     animation: pulse-glow 8s ease-in-out infinite alternate;
 }
 
-/* Pink Glow (Bottom Left) */
+/* Warm Grey/Green Glow (Bottom Left) */
 .hero::before {
     content: '';
     position: absolute;
     width: 50vw;
     height: 50vw;
-    background: radial-gradient(circle, rgba(255, 77, 141, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(95, 125, 109, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Muted Green/Grey */
     bottom: -15%;
     left: -10%;
     z-index: 0;
@@ -41,20 +43,21 @@
     animation: pulse-glow 10s ease-in-out infinite alternate-reverse;
 }
 
-/* Blue Glow (Center Accent) */
+/* Primary Green Glow (Center Accent) */
 .hero::after {
     content: '';
     position: absolute;
     width: 40vw;
     height: 40vw;
-    background: radial-gradient(circle, rgba(58, 134, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(46, 125, 91, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Primary Green */
     top: 20%;
     left: 40%;
     z-index: 0;
     border-radius: 50%;
     filter: blur(70px);
     opacity: 0.8;
-    animation: flow-blue 12s ease-in-out infinite;
+    animation: flow-green 12s ease-in-out infinite;
 }
 
 @keyframes pulse-glow {
@@ -69,7 +72,7 @@
     }
 }
 
-@keyframes flow-blue {
+@keyframes flow-glow {
     0% {
         transform: translate(0, 0) scale(1);
     }
@@ -88,53 +91,68 @@
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    /* Slightly more space for text */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: var(--space-12);
+    justify-content: center;
+    text-align: center;
     width: 100%;
     position: relative;
     z-index: 1;
+    max-width: 900px;
+    /* Constrain width for readability */
+    margin: 0 auto;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-right: var(--space-8);
+    align-items: center;
+    /* Center children */
+    padding-right: 0;
 }
 
 .badge {
     display: inline-flex;
     align-items: center;
-    align-self: flex-start;
+    align-self: center;
+    /* Center badge */
     gap: var(--space-2);
     padding: 8px 16px;
-    background: rgba(99, 102, 241, 0.05);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    background: rgba(var(--accent-blue-rgb), 0.1);
+    border: 1px solid rgba(var(--accent-blue-rgb), 0.2);
     border-radius: 100px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--primary-indigo);
+    color: var(--accent-blue);
     margin-bottom: var(--space-6);
     cursor: default;
     transition: all 0.3s ease;
 }
 
 .badge:hover {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(var(--accent-blue-rgb), 0.2);
     transform: translateY(-1px);
 }
 
-h1 {
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    /* Responsive fluid typography */
-    line-height: 1.1;
-    font-weight: 800;
-    letter-spacing: -0.03em;
+.hero-content h1 {
+    font-size: 5rem;
+    line-height: 0.9;
     margin-bottom: var(--space-6);
     color: var(--text-primary);
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+    /* Crunchy Retro Shadow */
+    letter-spacing: -0.02em;
+}
+
+.hero-content h1 .text-gradient {
+    background: none;
+    color: var(--accent-blue);
+    -webkit-text-fill-color: initial;
+    text-shadow: inherit;
+    filter: none;
+    animation: none;
 }
 
 .hero-description {
@@ -142,13 +160,18 @@ h1 {
     color: var(--text-secondary);
     margin-bottom: var(--space-8);
     line-height: 1.6;
-    max-width: 540px;
+    max-width: 640px;
+    /* Increase width slightly for centered text */
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 400;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    /* Center buttons */
     gap: var(--space-4);
     margin-bottom: var(--space-12);
 }
