@@ -151,3 +151,10 @@
         right: 24px;
     }
 }
+
+.logo-image {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 1px;
+}
