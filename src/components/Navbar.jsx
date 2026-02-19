@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -24,21 +25,20 @@ const Navbar = () => {
             <div className="container navbar-container">
                 {/* Left Links */}
                 <div className="nav-group left">
-                    <Link to="/#prebuilt" className="nav-item">Prebuilt</Link>
-                    <Link to="/#customized" className="nav-item">Customized</Link>
+                    <Link to="/#services" className="nav-item">Services</Link>
+                    <Link to="/#work" className="nav-item">Work</Link>
                 </div>
 
                 {/* Centered Logo */}
                 <Link to="/" className="logo">
-                    <img src="/src/assets/logo.png" alt="PixelPilot Logo" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
-                    <Code2 className="logo-icon" style={{ display: 'none' }} />
+                    <img src={logo} alt="PixelPilot Logo" className="logo-image" />
                     <span><span style={{ color: 'var(--accent-blue)' }}>Pixel</span>Pilot</span>
                 </Link>
 
                 {/* Right Links */}
                 <div className="nav-group right">
-                    <Link to="/#about" className="nav-item">About Us</Link>
-                    <Link to="/contact" className={`nav-item ${isActive('/contact')}`}>Contact Us</Link>
+                    <Link to="/#process" className="nav-item">Process</Link>
+                    <Link to="/contact" className={`nav-item ${isActive('/contact')}`}>Contact</Link>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -49,10 +49,10 @@ const Navbar = () => {
 
             {/* Mobile Menu Overlay */}
             <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
-                <Link to="/#prebuilt" onClick={() => setIsOpen(false)}>Prebuilt</Link>
-                <Link to="/#customized" onClick={() => setIsOpen(false)}>Customized</Link>
-                <Link to="/#about" onClick={() => setIsOpen(false)}>About Us</Link>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
+                <Link to="/#services" onClick={() => setIsOpen(false)}>Services</Link>
+                <Link to="/#work" onClick={() => setIsOpen(false)}>Work</Link>
+                <Link to="/#process" onClick={() => setIsOpen(false)}>Process</Link>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
             </div>
         </nav>
     );

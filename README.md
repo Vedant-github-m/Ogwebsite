@@ -1,5 +1,16 @@
 # React + Vite
 
+## Running Locally
+
+To start the development server:
+1. Run `npm install` to install dependencies.
+2. Run `npm run dev` to start the server.
+3. Open `http://localhost:5173/` in your browser.
+
+## Featured Project
+The featured portfolio project has been updated to **Graphixwala** (https://graphixwala.com/).
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

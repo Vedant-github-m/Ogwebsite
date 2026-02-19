@@ -107,33 +107,52 @@
 /* Right Column: Form */
 .form-card {
     background: #FFFFFF;
-    padding: 48px;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: Add a subtle top colored border/accent */
+.form-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-main);
 }
 
 .form-group {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .form-group label {
     display: block;
-    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 14px 16px;
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
+    padding: 12px 16px;
+    border: 2px solid #E5E7EB;
+    /* Cleaner, slightly thicker border */
+    border-radius: 10px;
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: all 0.2s ease;
-    background: var(--bg-secondary);
+    background: #FFFFFF;
+    /* Clean White */
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -141,30 +160,44 @@
     outline: none;
     border-color: var(--accent-blue);
     background: #FFFFFF;
-    box-shadow: 0 0 0 4px rgba(var(--accent-blue-rgb), 0.1);
+    box-shadow: 0 0 0 4px rgba(46, 160, 67, 0.15);
+    transform: translateY(-2px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9CA3AF;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 16px;
+    padding: 18px;
     background: var(--gradient-main);
     color: #FFFFFF;
-    font-weight: 600;
-    font-size: 1rem;
+    font-family: var(--font-heading);
+    /* Pixel Font */
+    font-weight: 500;
+    font-size: 1.5rem;
+    /* Larger for pixel font */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     border-radius: 12px;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(var(--accent-blue-rgb), 0.3);
+    box-shadow: 0 4px 12px rgba(46, 160, 67, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(var(--accent-blue-rgb), 0.4);
+    box-shadow: 0 8px 24px rgba(46, 160, 67, 0.4);
+    background: var(--gradient-hover);
 }
 
 /* Responsive */

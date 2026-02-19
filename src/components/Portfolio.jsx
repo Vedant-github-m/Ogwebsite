@@ -1,16 +1,17 @@
 import { ArrowRight, ExternalLink } from 'lucide-react';
-import projectFintech from '../assets/project-fintech.png';
+import projectGraphixwala from '../assets/project-graphixwala.png';
 import projectHealth from '../assets/project-health.png';
+import projectFintech from '../assets/project-fintech.png';
 import '../styles/Portfolio.css';
 
 const projects = [
     {
         id: 1,
-        title: 'FinTech Analytics Dashboard',
-        category: 'Web Application',
-        image: projectFintech,
-        description: 'A real-time financial data visualization platform processing millions of transactions daily with sub-second latency.',
-        link: '#'
+        title: 'Graphixwala',
+        category: 'Digital Solutions & Branding',
+        image: projectGraphixwala,
+        description: 'A dynamic digital agency platform delivering creative branding, web design, and marketing solutions. Features a vibrant, responsive interface showcasing comprehensive service offerings.',
+        link: 'https://graphixwala.com/'
     },
     {
         id: 2,
@@ -18,6 +19,14 @@ const projects = [
         category: 'Mobile Development',
         image: projectHealth,
         description: 'IoT-enabled mobile application for monitoring vital signs and connecting patients with healthcare providers securely.',
+        link: '#'
+    },
+    {
+        id: 3,
+        title: 'FinTech Analytics Dashboard',
+        category: 'Web Application',
+        image: projectFintech,
+        description: 'A real-time financial data visualization platform processing millions of transactions daily with sub-second latency.',
         link: '#'
     }
 ];
@@ -55,9 +64,7 @@ const Portfolio = () => {
                     ))}
                 </div>
 
-                <div className="portfolio-footer">
-                    <a href="#" className="btn btn-outline">View All Projects</a>
-                </div>
+
             </div>
         </section>
     );

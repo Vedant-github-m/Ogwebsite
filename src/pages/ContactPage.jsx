@@ -28,7 +28,7 @@ const ContactPage = () => {
                                         <div className="icon-circle"><Mail size={20} /></div>
                                         <div>
                                             <h4>Email</h4>
-                                            <a href="mailto:hello@devservice.com">hello@devservice.com</a>
+                                            <a href="mailto:hello@pixelpilot.com">hello@pixelpilot.com</a>
                                         </div>
                                     </div>
                                     <div className="detail-item">

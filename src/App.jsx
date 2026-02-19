@@ -4,9 +4,12 @@ import Home from './pages/Home';
 import ContactPage from './pages/ContactPage';
 
 
+import ScrollToAnchor from './components/ScrollToAnchor';
+
 function App() {
   return (
     <Router>
+      <ScrollToAnchor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />

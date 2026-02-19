@@ -27,7 +27,7 @@ const benefits = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="why-us-section">
+        <section className="why-us-section" id="why-us">
             <div className="container">
                 <div className="why-us-content">
                     <div className="why-us-header">

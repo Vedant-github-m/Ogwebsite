@@ -157,4 +157,5 @@
     width: auto;
     object-fit: contain;
     margin-right: 1px;
+    mix-blend-mode: multiply;
 }

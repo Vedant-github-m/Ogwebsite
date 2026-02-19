@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import heroImage from '../assets/hero-illustration.png';
 import '../styles/Hero.css';
@@ -19,16 +20,16 @@ const Hero = () => {
                         From cloud architecture to intuitive UIs, we turn complex challenges into seamless experiences.
                     </p>
                     <div className="hero-actions">
-                        <a href="#contact" className="btn btn-primary icon-btn">
+                        <Link to="/contact" className="btn btn-primary icon-btn">
                             Start a Project <ArrowRight size={18} />
-                        </a>
+                        </Link>
                         <a href="#services" className="btn btn-outline">
                             View Services
                         </a>
                     </div>
 
                     <div className="trust-indicators">
-                        <span>Trusted by 50+ Innovators</span>
+                        <span>Trusted by 10+ Innovators</span>
                     </div>
                 </div>
 

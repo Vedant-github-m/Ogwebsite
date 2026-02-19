@@ -41,6 +41,13 @@
     height: 28px;
 }
 
+.footer-brand .logo-image {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
 .footer-brand p {
     color: var(--text-secondary);
     font-size: 1rem;

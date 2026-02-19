@@ -1,4 +1,5 @@
 import { Code2, Github, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -7,23 +8,16 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-brand">
-                        <div className="logo">
-                            <Code2 className="logo-icon" />
-                            <span>DevService</span>
-                        </div>
+                        <Link to="/" className="logo">
+                            <img src="/src/assets/logo.png" alt="PixelPilot Logo" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+                            <Code2 className="logo-icon" style={{ display: 'none' }} />
+                            <span>PixelPilot</span>
+                        </Link>
                         <p>Premium software development for the modern web. Transforming ideas into digital reality.</p>
                     </div>
 
                     <div className="footer-links">
-                        <div className="footer-column">
-                            <h4>Company</h4>
-                            <ul>
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#careers">Careers</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
+
                         <div className="footer-column">
                             <h4>Services</h4>
                             <ul>
@@ -38,7 +32,7 @@ const Footer = () => {
                             <ul className="contact-list">
                                 <li>
                                     <Mail size={16} />
-                                    <span>hello@devservice.com</span>
+                                    <span>hello@pixelpilot.com</span>
                                 </li>
                                 <li>
                                     <Phone size={16} />
@@ -62,7 +56,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} DevService. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} PixelPilot. All rights reserved.</p>
                     <div className="footer-legal">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>

@@ -6,7 +6,7 @@ import '../styles/Testimonials.css';
 const testimonials = [
     {
         id: 1,
-        quote: "DevService transformed our legacy system into a modern, scalable platform. Their technical expertise and attention to detail are unmatched.",
+        quote: "PixelPilot transformed our legacy system into a modern, scalable platform. Their technical expertise and attention to detail are unmatched.",
         name: "Alex Morgan",
         role: "CTO, FinTech Solutions",
     },
