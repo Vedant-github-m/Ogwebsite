@@ -1,0 +1,36 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111827;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Shield Icon Main -->
+  <path d="M400 80 C 300 80, 250 150, 250 200 C 250 320, 350 380, 400 400 C 450 380, 550 320, 550 200 C 550 150, 500 80, 400 80 Z" fill="url(#shieldGrad)" filter="drop-shadow(0 0 20px rgba(168, 85, 247, 0.4))"/>
+  
+  <!-- Inner Protection Graphic -->
+  <path d="M400 130 C 350 130, 320 180, 320 210 C 320 280, 380 320, 400 330 C 420 320, 480 280, 480 210 C 480 180, 450 130, 400 130 Z" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Lock Icon -->
+  <rect x="375" y="210" width="50" height="40" rx="5" fill="#f3f4f6"/>
+  <path d="M385 210 V 195 A 15 15 0 0 1 415 195 V 210" stroke="#f3f4f6" stroke-width="6" fill="none"/>
+  <circle cx="400" cy="230" r="5" fill="#a855f7"/>
+  
+  <!-- Clock/Time Symbols -->
+  <circle cx="650" cy="150" r="40" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+  <path d="M650 150 L650 130" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M650 150 L665 150" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Particles -->
+  <circle cx="200" cy="300" r="20" fill="#3b82f6" opacity="0.3" filter="blur(5px)"/>
+  <circle cx="600" cy="350" r="15" fill="#a855f7" opacity="0.3" filter="blur(5px)"/>
+  
+  <text x="400" y="435" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#9ca3af" font-weight="bold" letter-spacing="3">KIDSHIELD PROTECTION</text>
+</svg>

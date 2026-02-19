@@ -8,7 +8,7 @@ const CTA = () => {
             <div className="container">
                 <div className="cta-content">
                     <h2>Ready to build your <span className="text-gradient">software?</span></h2>
-                    <p>Let's turn your vision into reality. trusted by startups and enterprises worldwide.</p>
+                    <p>Let's turn your vision into reality.</p>
                     <Link to="/contact" className="btn btn-primary btn-lg">
                         Get Free Consultation <ArrowRight size={20} />
                     </Link>

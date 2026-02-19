@@ -6,8 +6,9 @@
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-8);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    /* Slightly reduced gap to fit 4 */
     margin-bottom: var(--space-12);
 }
 
@@ -136,9 +137,10 @@
     text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
     }
 }
 

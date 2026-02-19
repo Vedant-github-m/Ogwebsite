@@ -1,0 +1,31 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0b1120"/>
+  
+  <!-- Grid -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2937" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  
+  <!-- Dashboard Card -->
+  <rect x="100" y="80" width="600" height="290" rx="10" fill="#111827" stroke="#374151" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="120" y="100" width="150" height="20" rx="4" fill="#374151"/>
+  
+  <!-- Chart Area -->
+  <polyline points="120,300 180,280 240,220 300,260 360,180 420,200 480,150 540,120 600,160 660,100" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M120,300 L180,280 L240,220 L300,260 L360,180 L420,200 L480,150 L540,120 L600,160 L660,100 V320 H120 Z" fill="rgba(16, 185, 129, 0.1)"/>
+  
+  <!-- Stats Cards -->
+  <rect x="550" y="200" width="120" height="60" rx="8" fill="#1f2937" stroke="#374151"/>
+  <rect x="560" y="215" width="60" height="8" rx="2" fill="#6b7280"/>
+  <rect x="560" y="235" width="80" height="8" rx="2" fill="#10b981"/>
+  
+  <!-- Neon accents -->
+  <circle cx="660" cy="100" r="4" fill="#10b981" filter="drop-shadow(0 0 5px #10b981)"/>
+  
+  <text x="400" y="420" text-anchor="middle" font-family="monospace" font-size="20" fill="#10b981" letter-spacing="3">FINTECH ANALYTICS</text>
+</svg>

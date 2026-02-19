@@ -1,7 +1,8 @@
 import { ArrowRight, ExternalLink } from 'lucide-react';
-import projectGraphixwala from '../assets/project-graphixwala.png';
-import projectHealth from '../assets/project-health.png';
-import projectFintech from '../assets/project-fintech.png';
+import projectGraphixwala from '../assets/graphixwala.svg';
+import projectHealth from '../assets/vitalsense.svg';
+import projectFintech from '../assets/fintech.svg';
+import projectKidShield from '../assets/kidshield.svg';
 import '../styles/Portfolio.css';
 
 const projects = [
@@ -28,6 +29,14 @@ const projects = [
         image: projectFintech,
         description: 'A real-time financial data visualization platform processing millions of transactions daily with sub-second latency.',
         link: '#'
+    },
+    {
+        id: 4,
+        title: 'KidShield',
+        category: 'Android App',
+        image: projectKidShield,
+        description: "A Parent Control Time Lock App via which parents can set time limits for their child's app usage. The child can also request more time by entering an OTP sent to their parent's phone.",
+        link: '/kidshield'
     }
 ];
 
