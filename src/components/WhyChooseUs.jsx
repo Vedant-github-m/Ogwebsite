@@ -5,7 +5,7 @@ const benefits = [
     {
         icon: <Users size={32} />,
         title: 'Experienced Developers',
-        description: 'Our team consists of senior engineers with years of expertise in building complex systems.'
+        description: 'Our team consists of engineers with extensive experience in building complex systems.'
     },
     {
         icon: <Zap size={32} />,

@@ -17,7 +17,7 @@ const Hero = () => {
                     </h1>
                     <p className="hero-description">
                         We engineer robust, high-performance digital solutions tailored for startups and enterprises.
-                        From cloud architecture to intuitive UIs, we turn complex challenges into seamless experiences.
+                        From intuitive UIs to complex backends, we turn challenges into seamless experiences.
                     </p>
                     <div className="hero-actions">
                         <Link to="/contact" className="btn btn-primary icon-btn">

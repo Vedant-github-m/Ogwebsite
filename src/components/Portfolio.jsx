@@ -1,7 +1,6 @@
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import projectGraphixwala from '../assets/graphixwala.svg';
-import projectHealth from '../assets/vitalsense.svg';
-import projectFintech from '../assets/fintech.svg';
+import projectDevanshu from '../assets/devanshu_portfolio.svg';
 import projectKidShield from '../assets/kidshield.svg';
 import '../styles/Portfolio.css';
 
@@ -16,22 +15,14 @@ const projects = [
     },
     {
         id: 2,
-        title: 'VitalSense Health App',
-        category: 'Mobile Development',
-        image: projectHealth,
-        description: 'IoT-enabled mobile application for monitoring vital signs and connecting patients with healthcare providers securely.',
-        link: '#'
+        title: 'Devanshu Tayal Portfolio',
+        category: 'Personal Portfolio',
+        image: projectDevanshu,
+        description: 'A modern, interactive portfolio website showcasing projects, skills, and experience with a sleek dark-mode aesthetic.',
+        link: 'https://devanshutayal.com/'
     },
     {
         id: 3,
-        title: 'FinTech Analytics Dashboard',
-        category: 'Web Application',
-        image: projectFintech,
-        description: 'A real-time financial data visualization platform processing millions of transactions daily with sub-second latency.',
-        link: '#'
-    },
-    {
-        id: 4,
         title: 'KidShield',
         category: 'Android App',
         image: projectKidShield,
