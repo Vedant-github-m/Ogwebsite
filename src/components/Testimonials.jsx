@@ -6,21 +6,33 @@ import '../styles/Testimonials.css';
 const testimonials = [
     {
         id: 1,
-        quote: "PixelPilot transformed our legacy system into a modern, scalable platform. Their technical expertise and attention to detail are unmatched.",
-        name: "Alex Morgan",
-        role: "CTO, FinTech Solutions",
+        quote: "PixelPilot completely transformed our e-commerce operations. Their team delivered exceptional quality within our tight deadlines.",
+        name: "Rahul Sharma",
+        role: "Director of Technology, ShopKart India",
     },
     {
         id: 2,
-        quote: "We were impressed by how quickly they understood our vision. The mobile app they built helped us secure our Series A funding.",
-        name: "Sarah Chen",
-        role: "Founder, HealthTech Inc.",
+        quote: "Working with them was a seamless experience. The mobile application they built for us has seen tremendous user engagement.",
+        name: "Priya Desai",
+        role: "CEO, FinServe Mumbai",
     },
     {
         id: 3,
-        quote: "Professional, reliable, and incredibly talented. They delivered our project on time and exceeded all our expectations.",
-        name: "Michael Ross",
-        role: "Director, E-Commerce Global",
+        quote: "We needed a robust backend system to handle millions of transactions securely, and PixelPilot delivered beyond our expectations.",
+        name: "Amit Patel",
+        role: "CTO, TechLogistics Bengaluru",
+    },
+    {
+        id: 4,
+        quote: "Their technical expertise and attention to detail are amazing. The scalable platform they architected has helped us expand rapidly.",
+        name: "Jessica Mitchell",
+        role: "Product Manager, InnovateTech NY",
+    },
+    {
+        id: 5,
+        quote: "An incredible partner for our digital transformation journey. The team understood our vision quickly and executed it perfectly.",
+        name: "David Morrison",
+        role: "Founder, HealthBridge Valley",
     }
 ];
 
