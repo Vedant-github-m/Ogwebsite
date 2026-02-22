@@ -18,7 +18,7 @@ const testimonials = [
     },
     {
         id: 3,
-        quote: "We needed a robust backend system to handle millions of transactions securely, and PixelPilot delivered beyond our expectations.",
+        quote: "PixelPilot's team is incredibly talented! They rebuilt our entire web platform from scratch, improving performance by 40%. Highly recommend them.",
         name: "Amit Patel",
         role: "CTO, TechLogistics Bengaluru",
     },
