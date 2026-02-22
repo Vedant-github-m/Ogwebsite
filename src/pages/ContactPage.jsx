@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import '../styles/ContactPage.css';
 
 const ContactPage = () => {
+    const form = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        emailjs.sendForm('service_476vprp', 'template_5kpbgs5', form.current, 'i8QsV5_h0KpUuaDKa')
+            .then((result) => {
+                console.log(result.text);
+                setSubmitStatus('success');
+                form.current.reset();
+            }, (error) => {
+                console.log(error.text);
+                setSubmitStatus('error');
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+                setTimeout(() => setSubmitStatus(null), 5000);
+            });
+    };
+
     return (
         <div className="contact-page">
             <Navbar />
@@ -28,21 +53,21 @@ const ContactPage = () => {
                                         <div className="icon-circle"><Mail size={20} /></div>
                                         <div>
                                             <h4>Email</h4>
-                                            <a href="mailto:hello@pixelpilot.com">hello@pixelpilot.com</a>
+                                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com" target="_blank" rel="noopener noreferrer">contact@pixelpilotlabs.com</a>
                                         </div>
                                     </div>
                                     <div className="detail-item">
-                                        <div className="icon-circle"><Phone size={20} /></div>
+                                        <div className="icon-circle"><Instagram size={20} /></div>
                                         <div>
-                                            <h4>Phone</h4>
-                                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                                            <h4>Instagram</h4>
+                                            <a href="https://www.instagram.com/pixelpilot_labs?igsh=cWRlaGVhMjI5dXF1" target="_blank" rel="noopener noreferrer">PixelPilot_Labs</a>
                                         </div>
                                     </div>
                                     <div className="detail-item">
-                                        <div className="icon-circle"><MapPin size={20} /></div>
+                                        <div className="icon-circle"><Linkedin size={20} /></div>
                                         <div>
-                                            <h4>Office</h4>
-                                            <p>123 Innovation Dr, Tech City</p>
+                                            <h4>LinkedIn</h4>
+                                            <a href="https://www.linkedin.com/in/pixel-pilot-2a1a783b2?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">PixelPilot</a>
                                         </div>
                                     </div>
                                 </div>
@@ -52,30 +77,36 @@ const ContactPage = () => {
                         {/* Right Side: Contact Form */}
                         <div className="contact-form-column">
                             <div className="form-card">
-                                <form onSubmit={(e) => e.preventDefault()}>
+                                <form ref={form} onSubmit={sendEmail}>
                                     <div className="form-group">
                                         <label htmlFor="name">Full Name</label>
-                                        <input type="text" id="name" placeholder="John Doe" required />
+                                        <input type="text" id="name" name="name" placeholder="John Doe" required />
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="email">Email Address</label>
-                                        <input type="email" id="email" placeholder="john@example.com" required />
+                                        <input type="email" id="email" name="email" placeholder="john@example.com" required />
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="company">Company (Optional)</label>
-                                        <input type="text" id="company" placeholder="Your Company Ltd" />
+                                        <input type="text" id="company" name="company" placeholder="Your Company Ltd" />
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="message">Message</label>
-                                        <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                                     </div>
 
-                                    <button type="submit" className="submit-btn">
-                                        Send Message <Send size={18} />
+                                    <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                                        {isSubmitting ? 'Sending...' : 'Send Message'} <Send size={18} />
                                     </button>
+                                    {submitStatus === 'success' && (
+                                        <p style={{ color: '#4caf50', marginTop: '15px', textAlign: 'center', fontWeight: '500' }}>Message sent successfully!</p>
+                                    )}
+                                    {submitStatus === 'error' && (
+                                        <p style={{ color: '#f44336', marginTop: '15px', textAlign: 'center', fontWeight: '500' }}>Failed to send message: Check console for error.</p>
+                                    )}
                                 </form>
                             </div>
                         </div>

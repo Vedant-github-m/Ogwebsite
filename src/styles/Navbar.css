@@ -57,7 +57,7 @@
 }
 
 /* Logo - Centerpiece */
-.logo {
+.navbar .logo {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -126,29 +126,41 @@
 }
 
 @media (max-width: 900px) {
+    .navbar {
+        width: 90%;
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .navbar-container {
         min-width: unset;
         width: 100%;
-        padding: 12px 24px;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         gap: 0;
     }
 
     .nav-group {
         display: none;
-        /* Hide desktop links */
     }
 
-    .logo {
-        flex-grow: 1;
-        justify-content: center;
-        /* Center logo on mobile too */
+    .navbar .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
     }
 
     .mobile-toggle {
         display: block;
-        position: absolute;
-        right: 24px;
+        margin-left: auto;
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
     }
 }
 

@@ -1,4 +1,4 @@
-import { Code2, Github, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Code2, Mail, Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
@@ -31,27 +31,26 @@ const Footer = () => {
                             <h4>Contact</h4>
                             <ul className="contact-list">
                                 <li>
-                                    <Mail size={16} />
-                                    <span>hello@pixelpilot.com</span>
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit' }}>
+                                        <Mail size={16} />
+                                        <span>contact@pixelpilotlabs.com</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Phone size={16} />
-                                    <span>+1 (555) 123-4567</span>
+                                    <a href="https://www.instagram.com/pixelpilot_labs?igsh=cWRlaGVhMjI5dXF1" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit' }}>
+                                        <Instagram size={16} />
+                                        <span>PixelPilot_Labs</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <MapPin size={16} />
-                                    <span>San Francisco, CA</span>
+                                    <a href="https://www.linkedin.com/in/pixel-pilot-2a1a783b2?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit' }}>
+                                        <Linkedin size={16} />
+                                        <span>PixelPilot</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
-                        <div className="footer-column">
-                            <h4>Social</h4>
-                            <div className="social-icons">
-                                <a href="#" aria-label="Github"><Github size={20} /></a>
-                                <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
-                                <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 

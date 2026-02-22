@@ -32,6 +32,7 @@
     /* Dark logo text */
     text-decoration: none;
     letter-spacing: -0.03em;
+    justify-content: flex-start;
 }
 
 .footer-brand .logo-icon {
@@ -45,7 +46,7 @@
     height: 28px;
     width: auto;
     object-fit: contain;
-    margin-right: 8px;
+    mix-blend-mode: multiply;
 }
 
 .footer-brand p {
@@ -178,6 +179,34 @@
 @media (max-width: 600px) {
     .footer {
         padding: 48px 0 32px;
+    }
+
+    .footer-brand {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 24px auto;
+        text-align: center;
+        position: relative;
+        padding: 0;
+    }
+
+    .footer-brand .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 16px auto;
+        gap: 8px;
+    }
+
+    .footer-brand p {
+        display: block;
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 1.5;
+        text-align: center;
     }
 
     .footer-links {
