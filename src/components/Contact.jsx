@@ -8,6 +8,11 @@ const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
 
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const emailLink = isMobile
+        ? "mailto:contact@pixelpilotlabs.com"
+        : "https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com";
+
     const sendEmail = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -39,7 +44,7 @@ const Contact = () => {
 
                 <div className="contact-container">
                     <div className="contact-info">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com" target="_blank" rel="noopener noreferrer" className="contact-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <a href={emailLink} target="_blank" rel="noopener noreferrer" className="contact-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div className="icon-box"><Mail /></div>
                             <div>
                                 <h3>Email Us</h3>

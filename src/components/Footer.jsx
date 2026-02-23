@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const emailLink = isMobile
+        ? "mailto:contact@pixelpilotlabs.com"
+        : "https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com";
+
     return (
         <footer className="footer">
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-brand">
                         <Link to="/" className="logo">
-                            <img src="/src/assets/logo.png" alt="PixelPilot Logo" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+                            <img src="/logo.png" alt="PixelPilot Logo" className="logo-image" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
                             <Code2 className="logo-icon" style={{ display: 'none' }} />
                             <span>PixelPilot</span>
                         </Link>
@@ -31,7 +36,7 @@ const Footer = () => {
                             <h4>Contact</h4>
                             <ul className="contact-list">
                                 <li>
-                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit' }}>
+                                    <a href={emailLink} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit' }}>
                                         <Mail size={16} />
                                         <span>contact@pixelpilotlabs.com</span>
                                     </a>

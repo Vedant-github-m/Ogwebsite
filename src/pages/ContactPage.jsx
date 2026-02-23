@@ -10,6 +10,11 @@ const ContactPage = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
 
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const emailLink = isMobile
+        ? "mailto:contact@pixelpilotlabs.com"
+        : "https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com";
+
     const sendEmail = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -53,7 +58,7 @@ const ContactPage = () => {
                                         <div className="icon-circle"><Mail size={20} /></div>
                                         <div>
                                             <h4>Email</h4>
-                                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@pixelpilotlabs.com" target="_blank" rel="noopener noreferrer">contact@pixelpilotlabs.com</a>
+                                            <a href={emailLink} target="_blank" rel="noopener noreferrer">contact@pixelpilotlabs.com</a>
                                         </div>
                                     </div>
                                     <div className="detail-item">
