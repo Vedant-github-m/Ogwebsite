@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Mail, Instagram, Linkedin, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/SEO';
 import '../styles/ContactPage.css';
 
 const ContactPage = () => {
@@ -37,6 +38,11 @@ const ContactPage = () => {
 
     return (
         <div className="contact-page">
+            <SEO
+                title="Contact Us"
+                description="Get in touch with PixelPilot Labs. Let's build something great together."
+                url="/contact"
+            />
             <Navbar />
 
             <main className="contact-main">

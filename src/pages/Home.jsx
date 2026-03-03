@@ -8,10 +8,16 @@ import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const Home = () => {
     return (
         <div className="home-page">
+            <SEO
+                title="Premium Web & Mobile Development"
+                description="PixelPilot Labs provides premium web, mobile, and custom software development services."
+                url="/"
+            />
             <Navbar />
             <Hero />
             <Services />

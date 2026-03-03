@@ -10,6 +10,7 @@ import kidshield4 from '../assets/kidshield-4.jpeg';
 import kidshield5 from '../assets/kidshield-5.jpeg';
 import kidshield6 from '../assets/kidshield-6.jpeg';
 import kidshield7 from '../assets/kidshield-7.jpeg';
+import SEO from '../components/SEO';
 import '../styles/KidShield.css';
 
 const KidShield = () => {
@@ -24,6 +25,11 @@ const KidShield = () => {
 
     return (
         <div className="kidshield-page">
+            <SEO
+                title="KidShield App"
+                description="KidShield is a comprehensive Parental Control Time Lock App that empowers parents to set healthy digital boundaries."
+                url="/kidshield"
+            />
             <Navbar />
 
             <div className="kidshield-container">
