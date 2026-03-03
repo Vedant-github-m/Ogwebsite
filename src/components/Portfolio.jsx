@@ -57,7 +57,7 @@ const Portfolio = () => {
                                 <h3>{project.title}</h3>
                                 <p>{project.description}</p>
                                 <a href={project.link} className="portfolio-link">
-                                    View Case Study <ArrowRight size={16} />
+                                    View Project <ArrowRight size={16} />
                                 </a>
                             </div>
                         </div>

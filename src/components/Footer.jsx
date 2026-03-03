@@ -28,7 +28,7 @@ const Footer = () => {
                             <ul>
                                 <li><a href="#web">Web Development</a></li>
                                 <li><a href="#mobile">Mobile Apps</a></li>
-                                <li><a href="#cloud">Cloud Solutions</a></li>
+                                <li><a href="#cloud">Custom Software</a></li>
                                 <li><a href="#uiux">UI/UX Design</a></li>
                             </ul>
                         </div>

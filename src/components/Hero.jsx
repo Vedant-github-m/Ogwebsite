@@ -12,7 +12,7 @@ const Hero = () => {
 
                     <h1>
                         Building <br />
-                        <span className="text-gradient">Scalable Software</span> <br />
+                        <span className="text-gradient">Scalable Solutions</span> <br />
                         for the Future
                     </h1>
                     <p className="hero-description">
